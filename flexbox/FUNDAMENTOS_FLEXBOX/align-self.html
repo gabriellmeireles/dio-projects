@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self</title>
+    <style>
+        .flex-container{
+            display: flex;
+            max-width: 350px;
+            margin-bottom: 10px;
+            border: 1px solid white;
+            /*align-items: center;*/
+        }
+        .align-container{
+            align-items: center;
+        }
+        .item{
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+        .center{
+            align-self: center;
+        }
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .baseline{
+            align-self: baseline;
+        }
+        .stretch{
+            align-self: stretch;
+        }
+        .auto{
+            align-self: auto;
+        }
+        .column{
+            flex-direction: column;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>ROW</h1>
+    <section class="flex-container align-container">
+        <div class="item auto">aaa</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Teste teste test teste teste teste teste</div>
+        <div class="item auto">Item 4 </div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">aaa</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Teste teste test teste teste teste teste</div>
+        <div class="item end">item 4 </div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">aaa</div>
+        <div class="item start">aaa</div>
+        <div class="item end">aaa</div>
+        <div class="item stretch">Teste teste test teste teste teste teste</div>
+    </section>
+
+    <h1>COLUMN</h1>
+    <section class="flex-container align-container column">
+        <div class="item auto">aaa</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Teste teste test teste teste teste teste</div>
+        <div class="item auto">Item 4 </div>
+    </section>
+
+    <section class="flex-container column">
+        <div class="item center">aaa</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Teste teste test teste teste teste teste</div>
+        <div class="item end">item 4 </div>
+    </section>
+
+    <section class="flex-container column">
+        <div class="item center">aaa</div>
+        <div class="item start">aaa</div>
+        <div class="item end">aaa</div>
+        <div class="item stretch">Teste teste test teste teste teste teste</div>
+    </section>
+</body>
+</html>
